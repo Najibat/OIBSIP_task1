@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Hair Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+     <a href="#" class="logo">4coilycurls<span>~</span></a>
+     <ul class="menu-links">
+        <span id="close-menu-btn" class="hamburger">menu</span>
+        <li><a href="#">Home</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Testimonials</a></li>
+
+     </ul>
+     
+
+     <span id="menu-btn" class="hamburger">menu</span>
+        </nav>
+    </header>
+
+    <section class="hair-section">
+        <div class="content">
+            <h1>Welcome to 4coilycurls - Embrace the Power of Ayurvedic Hair Care!</h1>
+<p>Discover the secret to long, thick, and luscious curls with 4coilycurls. Our Ayurvedic hair products are specially formulated to nourish and strengthen your hair, giving you the confidence to flaunt your natural beauty.</p>
+<button>Order Now</button>
+        </div>
+        <div class="picture">
+            <img src="image2.png" alt="Photo">
+                </div>
+
+    </section>
+    
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("menu-btn");
+        const closemenubtn = document.querySelector("#close-menu-btn");
+    
+    menuBtn.addEventListener("click", () =>{
+header.classList.toggle("show-mobile-menu");
+});
+
+closemenubtn.addEventListener("click", () =>{
+menuBtn.click();
+});
+    </script>
+</body>
+</html>

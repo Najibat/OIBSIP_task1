@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(195, 155, 102);
+    height: 100vh;
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.picture{
+    margin-left:400px ;
+    margin-right: -150px;
+    margin-top: -850px;
+    margin-bottom: -250px;
+    height: 10px;
+    width: -10px;
+border-radius: 10px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar{
+display: flex;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+justify-content: space-between;
+}
+
+.navbar.logo{
+    font-size: 2.1rem;
+    font-weight: 800;
+
+}
+.navbar .logo span{
+    color:black;
+}
+
+.navbar .menu-links{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar a:hover{
+    color: brown;
+}
+
+.hair-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hair-section .content{
+    color: black;
+}
+
+.hair-section .content h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hair-section .content p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.hair-section .content button{
+    background: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 40px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+}
+
+.hair-section .content button:hover{
+    color: white;
+    background: brown;
+}
+
+#close-menu-btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 900px){
+header{
+    padding: 10px 20px;
+}
+
+
+    header.show-mobile-menu::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+height: 100%;
+backdrop-filter: blur(5px);
+    }
+
+    #close-menu-btn, #menu-btn{
+        display: block;
+    }
+
+.navbar .menu-links{
+    position: fixed;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    padding: 70px 40px 0;
+    transition: left 0.15s ease;
+}
+
+header.show-mobile-menu .navbar .menu-links{
+    left: 0;
+}
+
+
+.navbar a{
+color: black;
+}
+.hair-section .content{
+    text-align: center;
+}
+
+.hair-section .content :is(h1, p){
+    max-width: 100%;
+}
+
+.hair-section .content h1 {
+    font-size: 2.3rem;
+    line-height: 60px;
+}
+
+.hair-section .content button{
+    padding: 9px 18px;
+}
+
+}
+    
